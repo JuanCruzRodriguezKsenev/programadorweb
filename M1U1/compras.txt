@@ -1,0 +1,6 @@
+pollo
+carne
+zapallo
+calabaza
+uva
+manzana
