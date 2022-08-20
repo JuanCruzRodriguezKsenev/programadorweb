@@ -1,0 +1,30 @@
+*{
+    margin: 9px;
+}
+
+#foto{
+    margin: 0px;
+}
+
+nav{
+    border-top: 1px solid black;
+    height: 20px;
+    line-height: 0px;
+    width: 100%;    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: black;
+    display: block;
+}
+footer{
+    border-top: 1px solid black;
+}
