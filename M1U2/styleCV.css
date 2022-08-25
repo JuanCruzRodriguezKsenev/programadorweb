@@ -19,36 +19,62 @@ header{
     position: sticky;
     top: 0;
     width: 100vw;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
 }
-header a{color: rgb(255, 255, 255);}
 #menu{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+#menu ul{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+}
+#menu li{display: flex;}
+#menu li :hover{background-color: rgba(255, 255, 255, 0.432);}
+#menu a{
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#menu label{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 #deployable-menu{
-    background-color: rgb(168, 7, 7);
+    background-color: rgba(0, 0, 0, 0.884);
+    border-radius: 0px 0px 15px 15px;
 }
 #deployable-menu .container{
     display: flex;
     justify-content: center;
-    padding-top: 70px;
-    padding-bottom: 40px;
+    padding: 40px 0px;
 }
 #deployable-menu ul{
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
+    gap: 10px;
 }
-#deployable-menu li{
-    padding-bottom: 30px;
-}
+#deployable-menu li{display: flex;}
+#deployable-menu li :hover{background-color: rgba(255, 255, 255, 0.432);}
 #deployable-menu a{
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 120%;
+    padding: 10px 20px;
+    display: inline-flex;
+    border-radius: 5px;
+}
+#navicon{
+    display: none;
+}
+#navicon :checked + #deployable-menu{
 }
 #intro{
     background-image: 
@@ -131,10 +157,4 @@ footer{
 footer .container{
     display: flex;
     align-items: center;
-}
-#navicon{
-    display: none;
-}
-#navicon :checked + #deployable-menu{
-    background-color: aqua;
 }
