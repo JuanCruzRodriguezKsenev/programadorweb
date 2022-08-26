@@ -12,7 +12,6 @@ a{text-decoration: none;}
     height: 100%;
     display: flex;
 }
-
 header{
     background-color: rgb(0, 0, 0);
     height: 8vh;
@@ -39,7 +38,9 @@ header{
     list-style: none;
 }
 
-#menu li{display: flex;}
+#menu li{
+    display: flex;
+    cursor: pointer;}
 
 #menu li :hover{background-color: rgba(255, 255, 255, 0.432);}
 
@@ -54,18 +55,21 @@ header{
     border-radius: 5px;
 }
 
-#deployable-menu{
+.deployable-menu{
     background-color: rgba(0, 0, 0, 0.884);
     border-radius: 0px 0px 15px 15px;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
 }
 
-#deployable-menu .container{
+.deployable-menu .container{
     display: flex;
     justify-content: center;
     padding: 40px 0px;
 }
 
-#deployable-menu ul{
+.deployable-menu ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,11 +77,11 @@ header{
     gap: 10px;
 }
 
-#deployable-menu li{display: flex;}
+.deployable-menu li{display: flex;}
 
-#deployable-menu li :hover{background-color: rgba(255, 255, 255, 0.432);}
+.deployable-menu li :hover{background-color: rgba(255, 255, 255, 0.432);}
 
-#deployable-menu a{
+.deployable-menu a{
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 120%;
@@ -86,12 +90,9 @@ header{
     border-radius: 5px;
 }
 
-#navicon{display: non;}
-
-#deployable-menu{
-    clip-path: circle(0 at center);
+.mostrar{
+    visibility: visible;
 }
-#navicon:checked + #deployable-menu{background-color: aquamarine;}
 
 #intro{
     background-image: 
@@ -143,26 +144,25 @@ header{
 
 #cv-data{
     background-color: rgb(245, 245, 245);
-    height: 100vh;
 }
 
 #cv-data .container{
     flex-direction: column;
-    justify-content: space-evenly;
+    padding-top: 20px;
+    gap: 10px;
 }
 
 #data{
     display: flex;
     flex-direction: column;
+    gap: 2px;
 }
 
 #likes{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 5px;
 }
-
-.article{padding-bottom: 5px;}
 
 .article-tittle{padding-bottom: 6px;}
 
@@ -182,4 +182,10 @@ footer{
 footer .container{
     display: flex;
     align-items: center;
+}
+
+section{
+    background-color: rgb(245, 245, 245);
+    min-height: 100vh;
+    border-bottom: 1px solid black;
 }
