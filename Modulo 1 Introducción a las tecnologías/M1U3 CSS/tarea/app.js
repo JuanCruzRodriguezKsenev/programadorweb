@@ -3,7 +3,7 @@ addEventListener("DOMContentLoaded", () => {
     if (btnmenu) {
         btnmenu.addEventListener("click", () => {
             const deploymenu = document.querySelector(".deployable-menu")
-            deploymenu.classList.toggle("mostrar")
+            deploymenu.classList.toggle("show")
         })
     }
 })
