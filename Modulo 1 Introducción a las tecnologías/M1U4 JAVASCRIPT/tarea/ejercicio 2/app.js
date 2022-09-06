@@ -1,8 +1,8 @@
-const Num1 = parseInt(prompt('Ingrese primer número:', ''));
-const Num2 = parseInt(prompt('Ingrese segundo número:', ''));
-const Num3 = parseInt(prompt('Ingrese tercer número:', ''));
-const Num4 = parseInt(prompt('Ingrese cuarto número:', ''));
-let Numeros = [Num1, Num2, Num3, Num4];
+const Num1 = parseInt(prompt('Ingrese primer número:', ''))
+const Num2 = parseInt(prompt('Ingrese segundo número:', ''))
+const Num3 = parseInt(prompt('Ingrese tercer número:', ''))
+const Num4 = parseInt(prompt('Ingrese cuarto número:', ''))
+let Numeros = [Num1, Num2, Num3, Num4]
 let NumMax = 0
 let UltNumExt = 0
 for( let i = 0; i < Numeros.length; i++){
