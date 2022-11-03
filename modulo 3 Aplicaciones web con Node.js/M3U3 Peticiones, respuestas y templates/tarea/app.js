@@ -28,16 +28,6 @@ app.use('/users', usersRouter);
 app.use('/form', formRouter);
 app.use('/location', locationRouter);
 
-//pq no funciona la ruta de la otra foma la tuve q hacer asi
-app.get("/form", function(req,res){
-  res.render("form")
-})
-
-app.get("/location", function(req,res){
-  res.render("location")
-})
-//fin de las rutas de "emergencia:)"
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

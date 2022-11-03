@@ -3,7 +3,7 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 const { eventNames } = require('../app');
 
-router.get('/form', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('form');
 });
 
@@ -12,13 +12,13 @@ router.post('/', async (req, res, next) => {
   var apellido = req.body.apellido;
   var email = req.body.email;
   var tel = req.body.tel;
-  var mensaje = req.body.mendaje;
+  var mensaje = req.body.mensaje;
 
   var obj = {
     to: 'lacolinajc@gmail.com',
     subject: 'contacto desde la web',
-    html: `${nombre} ${apellido} se contacto a traves del formulario en fulvito y quiere mas info a este correo: ${email} ademas, hizo el siguiente comentario: ${mensaje}. su tel es ${tel}`
-  };
+    html: `${nombre} ${apellido} se contacto a traves del formulario en fulvito y quiere mas info a este correo: ${email} ademas, hizo el siguiente comentario: ${mensaje}. su tel es ${tel}.`
+  }
 
   var transporter = nodemailer.createTransport({
     host: process.eventNames.SMTP_HOST,

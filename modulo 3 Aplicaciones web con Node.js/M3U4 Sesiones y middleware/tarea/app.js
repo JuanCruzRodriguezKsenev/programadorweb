@@ -6,8 +6,6 @@ var logger = require('morgan');
 
 var session = require('express-session');
 
-var indexRouter = require('./routes/index');
-
 var app = express();
 
 // view engine setup
@@ -25,8 +23,6 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
-
-// app.use('/', indexRouter);
 
 app.get('/', function (req, res) {
   var conocido = Boolean(req.session.nombre);
