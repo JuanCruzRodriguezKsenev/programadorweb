@@ -1,0 +1,30 @@
+<body>
+    <div class="cont">
+        <form class="row g-3" id="form" action="/form" method="post">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email">
+            </div>
+            <div class="col-12">
+                <label for="tel" class="form-label">Tel</label>
+                <input type="text" class="form-control" id="tel" name="tel">
+            </div>
+            <div class="col-12">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" name="mensaje" id="mensaje"></textarea>
+            </div>
+            <di class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </di>
+        </form>
+        <p>{{message}}</p>
+    </div>
+</body>
