@@ -1,0 +1,276 @@
+:root {
+    --main-color: rgb(62, 51, 119);
+    --pane-padding: 5px 42px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+    width: 100%;
+    min-height: 92vh;
+}
+
+/* inicio navbar */
+.navbar {
+    border-bottom: .0625rem solid white;
+    box-shadow: 0rem 0rem .625rem 0rem black;
+}
+
+.navbar-brand {
+    font-weight: 900;
+}
+
+/* fin navbar */
+
+/* inicio carrusel */
+
+.carrusel {
+    height: 93vh;
+    width: 100%;
+}
+
+#carouselExampleFade {
+    height: 93vh;
+}
+
+.carousel-item img {
+    height: 93vh;
+    object-fit: cover;
+}
+
+/* fin carrusel */
+
+/* inicio novedades */
+
+.novedades {
+    display: flex;
+    justify-content: center;
+    padding: 2em 8%;
+    gap: 2em;
+}
+
+.novedad {
+    display: flex;
+    width: 100%;
+}
+
+.novedad img {
+    width: 30%;
+}
+
+.novedad p {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* fin novedades */
+
+/* inicio featured y releases */
+
+.featured,
+.releases {
+    width: 100%;
+}
+
+.cards {
+    height: fit-content;
+    width: 100%;
+    padding: 2rem 8%;
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.card {
+    position: relative;
+    justify-content: flex-end;
+    overflow: hidden;
+    border: .0625rem solid black;
+}
+
+.card:hover .card-body{
+    opacity: 1;
+}
+
+.card-body {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    max-height: 100%;
+}
+
+.card h5 {
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+a.btn.btn-primary {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    border: 0px;
+    color: black;
+}
+
+.releases h5 {
+    color: black;
+}
+
+.releases a.btn.btn-primary {
+    background-color: black;
+    color: white;
+}
+
+/* fin featured y releases */
+
+/* inicio footer */
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 0px 25px;
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.up {
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    gap: 15px;
+}
+
+.down {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    gap: 25px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accordion-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.redes button {
+    background-color: transparent;
+    border: 0px;
+}
+
+.redes button :hover {
+    filter: gray;
+}
+
+.derechos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.derechos a {
+    color: grey;
+}
+
+#colapsable {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* fin footer */
+
+/* inicio location */
+
+.containerMap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+/* fin location */
+
+/* inicio formato formularios */
+
+#form {
+    max-width: 37.5rem;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* fin formato formularios */
+
+/* inicio admin main menu */
+
+#adminMainMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+}
+
+#adminMainMenu .user {
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    width: 100%;
+}
+
+#adminMainMenu .novedades {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#adminMainMenu .novedades .cabecera {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* fin admin main menu */

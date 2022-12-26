@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 19-12-2022 a las 21:44:29
+-- Tiempo de generación: 20-12-2022 a las 14:12:09
 -- Versión del servidor: 5.7.36
 -- Versión de PHP: 7.4.26
 
@@ -45,6 +45,27 @@ INSERT INTO `novedades` (`id`, `titulo`, `subtitulo`, `cuerpo`, `img_id`) VALUES
 (4, 'prueba 24', 'prueba 1', 'prueba 1', NULL),
 (10, '1imagen', '1imagen', '1imagen', NULL),
 (14, 'yueuu', 'yuyuturtuy', 'rtuytyutyurt', 'hjfsuw4egfqd4oswikcl');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user` varchar(80) NOT NULL,
+  `password` varchar(80) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `user`, `password`) VALUES
+(1, 'rucz', '81dc9bdb52d04dc20036dbd8313ed055');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

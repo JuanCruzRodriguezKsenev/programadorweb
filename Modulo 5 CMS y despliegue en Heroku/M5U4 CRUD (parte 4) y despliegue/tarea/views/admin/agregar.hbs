@@ -1,0 +1,15 @@
+<div class="cont">
+    <h2>agregar una nueva novedad</h2>
+    <form id="form" action="/admin/adminMenu/agregar" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <input type="text" class="form-control" name="titulo" placeholder="titulo">
+            <textarea type="text" class="form-control" placeholder="subtitulo" name="subtitulo"></textarea>
+            <label>Imagen: <input type="file" class="form-control" name="imagen"></label>
+            <textarea type="text" class="form-control" placeholder="cuerpo" name="cuerpo"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+    {{#if error}}
+        <p>{{message}}</p>
+    {{/if}}
+</div>
