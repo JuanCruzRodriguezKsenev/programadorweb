@@ -8,7 +8,15 @@
     <div class="novedades">
         <div class="cabecera">
             <h2>listado de novedades</h2>
-            <a href="/admin/adminMenu/agregar" class="btn btn-success"><i class="fas fa-plus"></i> Nueva novedad</a>
+            <div class="cabeceraDerecha">
+                <a href="/admin/adminMenu/agregar" class="btn btn-success"><i class="fas fa-plus"></i> Nueva novedad</a>
+                <form action="/admin/adminMenu" method="get">
+                    <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
         </div>
         <div class="row">
             <div class="col">
@@ -35,6 +43,11 @@
                         {{/each}}
                     </tbody>
                 </table>
+                {{#if is_search}}
+                    {{#unless novedades.length}}
+                        No se encontraron resultados para "<b>{{q}}</b>"
+                    {{/unless}}
+                {{/if}}
             </div>
         </div>
     </div>

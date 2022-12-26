@@ -1,3 +1,4 @@
+const { acquireConnection } = require('./bd')
 var pool = require('./bd')
 
 async function getNovedades(){
@@ -41,4 +42,10 @@ async function modificarNovedadById(obj, id){
     }
 }
 
-module.exports = {getNovedades, deleteNovedadesById, insertNovedad, getNovedadById, modificarNovedadById}
+async function buscarNovedades(busqueda){
+    var query = 'select * from novedades where titulo like ? OR subtitulo like ? OR cuerpo like ?'
+    var rows = await pool.query(query, ['%' + busqueda + '%', '%' + busqueda + '%', '%' + busqueda + '%'])
+    return rows
+}
+
+module.exports = {getNovedades, deleteNovedadesById, insertNovedad, getNovedadById, modificarNovedadById, buscarNovedades}
