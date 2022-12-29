@@ -1,0 +1,158 @@
+<body>
+    <div class="cont">
+
+        <div class="carrusel" id="inicio">
+
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-touch="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/pelota.jpg" class="d-block w-100" alt="img" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/botines.jpg" class="d-block w-100" alt="img" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/camiseta.jpg" class="d-block w-100" alt="img" loading="lazy">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="novedades">
+            <h2>Novedades</h2>
+            
+            <div class="novedades">
+            
+                {{#each novedades}}
+                <a href="#" class="novedad" data-bs-toggle="modal" data-bs-target="#modal{{id}}">
+                    <img src="{{imagen}}" alt="novedad">
+                    <p>{{titulo}}</p>
+                </a>
+                {{/each}}
+            
+                {{#each novedades}}
+                <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2>{{subtitulo}}</h2>
+                                <img src="{{imagen}}" alt="">
+                                <p>{{cuerpo}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div id="productos">
+            <h2>Productos</h2>
+            
+            <div class="featured">
+            
+                <div class="cards">
+            
+                    <div class="card">
+                        <img data-qa="image-media-img" alt="Sitio web oficial de Nike" class="_32IPZERI _3jm9Bm_E guL_1FMX"
+                            src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_500,c_limit/8b9527d9-742a-4712-8282-734a3c91b3c9/sitio-web-oficial-de-nike.png"
+                            data-landscape-url="https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/a3f67ec7-cc0a-4d77-81b7-01b19f537a9d/sitio-web-oficial-de-nike.png"
+                            data-portrait-url="https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/8b9527d9-742a-4712-8282-734a3c91b3c9/sitio-web-oficial-de-nike.png"
+                            data-image-loaded-class="guL_1FMX" data-lcp-loaded="false" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Ropa deportiva</h5>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <img data-qa="image-media-img" alt="Sitio web oficial de Nike" class="_32IPZERI _3jm9Bm_E guL_1FMX"
+                            src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_500,c_limit/57498b0b-af0f-4fdf-9c0f-556612c4dcfe/sitio-web-oficial-de-nike.png"
+                            data-landscape-url="https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/02515929-eb4b-469d-ad2f-fb372fc7acf1/sitio-web-oficial-de-nike.png"
+                            data-portrait-url="https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/57498b0b-af0f-4fdf-9c0f-556612c4dcfe/sitio-web-oficial-de-nike.png"
+                            data-image-loaded-class="guL_1FMX" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Calzado de colección</h5>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <img data-qa="image-media-img" alt="Sitio web oficial de Nike" class="_32IPZERI _3jm9Bm_E guL_1FMX"
+                            src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_500,c_limit/96336d62-1ae8-420d-8fb6-5a16419aa588/sitio-web-oficial-de-nike.png"
+                            data-landscape-url="https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/d623182f-878a-41df-9833-313d90d52ea4/sitio-web-oficial-de-nike.png"
+                            data-portrait-url="https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/96336d62-1ae8-420d-8fb6-5a16419aa588/sitio-web-oficial-de-nike.png"
+                            data-image-loaded-class="guL_1FMX" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Calzado running</h5>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <img data-qa="image-media-img" alt="Sitio web oficial de Nike" class="_32IPZERI _3jm9Bm_E guL_1FMX"
+                            src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_500,c_limit/72d8b5d5-aed9-4326-991a-79359c1e9f3b/sitio-web-oficial-de-nike.png"
+                            data-landscape-url="https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/c86fdadb-b533-4b26-9e3d-8121641481ae/sitio-web-oficial-de-nike.png"
+                            data-portrait-url="https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/72d8b5d5-aed9-4326-991a-79359c1e9f3b/sitio-web-oficial-de-nike.png"
+                            data-image-loaded-class="guL_1FMX" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Ropa de fútbol</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="policy" id="politica">
+            <h2>Politica de la marca</h2>
+            <div class="policyCards">
+                <div class="policyCard">
+                    <div class="policyCardContent">
+                        <h5 class="policyCardTittle"><i class="fa-solid fa-truck"></i> ENVIO GRATIS</h5>
+                        <p class="policyCardText">En todas las ordenes mayores a $2000</p>
+                    </div>
+                </div>
+                <div class="policyCard">
+                    <div class="policyCardContent">
+                        <h5><i class="fa-solid fa-box-open"></i> REENVOLSO GRATIS</h5>
+                        <p class="policyCardText">En el primer envio</p>
+                    </div>
+                </div>
+                <div class="policyCard">
+                    <div class="policyCardContent">
+                        <h5 class="policyCardTittle"><i class="fa-solid fa-gift"></i> DESCUENTO A MIEMBROS</h5>
+                        <p class="policyCardText">Registrate y ahorra hasta un $29%</p>
+                    </div>
+                </div>
+                <div class="policyCard">
+                    <div class="policyCardContent">
+                        <h5 class="policyCardTittle"><i class="fa-solid fa-dollar-sign"></i> SOPORTE PREMIUM</h5>
+                        <p class="policyCardText">Soporte las 24hs del día</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>

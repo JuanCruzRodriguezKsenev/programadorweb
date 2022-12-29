@@ -1,0 +1,54 @@
+<div id="adminMainMenu">
+    <h1>ADMIN MENU</h1>
+    <div class="user">
+        <p>hola {{usuario}}</p>
+        <a href="/admin/login/logout" type="submit" class="btn btn-danger">Cerrar Sesion <i
+                class="fas fa-sign-out-alt"></i></a>
+    </div>
+    <div class="novedades">
+        <div class="cabecera">
+            <h2>listado de novedades</h2>
+            <div class="cabeceraDerecha">
+                <a href="/admin/adminMenu/agregar" class="btn btn-success"><i class="fas fa-plus"></i> Nueva novedad</a>
+                <form action="/admin/adminMenu" method="get">
+                    <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">#</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col" class="text-end">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each novedades}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{titulo}}</td>
+                            <td>{{{imagen}}}</td>
+                            <td class="text-end">
+                                <a href="/admin/adminMenu/modificar/{{id}}" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
+                                <a href="/admin/adminMenu/eliminar/{{id}}" class="btn btn-secondary"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                {{#if is_search}}
+                    {{#unless novedades.length}}
+                        No se encontraron resultados para "<b>{{q}}</b>"
+                    {{/unless}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
