@@ -64,10 +64,13 @@
 }
 
 .novedades {
-    display: flex;
-    justify-content: center;
-    padding: 2em 8%;
-    gap: 2em;
+    height: fit-content;
+    width: 100%;
+    padding: 2rem 8%;
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 
 .novedad {
@@ -172,7 +175,7 @@
     width: 100%;
     padding: 2rem 8%;
     display: grid;
-    gap: 2em;
+    gap: 2rem;
     grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
@@ -195,6 +198,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.policyCardText, .policyCardTittle{
+    margin: 0;
+    padding: 0;
 }
 /* fin politica */
 
