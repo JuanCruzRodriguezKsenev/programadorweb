@@ -9,6 +9,53 @@
     box-sizing: border-box;
 }
 
+.hidden{
+    overflow: hidden;
+}
+
+/* inicio preloader */
+
+.preloader{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+}
+
+.spiner{
+    width: 70px;
+    height: 70px;
+    border-top: 5px solid rgba(255, 255, 255, 0.693);
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.spiner > div{
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* fin preloader */
+
 .cont {
     display: flex;
     flex-direction: column;
